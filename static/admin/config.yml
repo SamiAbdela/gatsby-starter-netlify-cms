@@ -32,6 +32,27 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
 
+  - name: "khutba"
+    label: "Khutba"
+    folder: "src/pages/khutba"
+    create: true
+    slug: "{{language}}-{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "khutba",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      # - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
+      - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Language", name: "language", widget: "string"}
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list" }
+
   - name: "pages"
     label: "Pages"
     files:
